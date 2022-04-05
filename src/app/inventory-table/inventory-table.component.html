@@ -1,0 +1,25 @@
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name</th>
+        <th scope="col">Class</th>
+        <th scope="col">Subject</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of ItemsArray; let i = index">
+        <th scope="row">{{item.id}}</th>
+        <td>{{ item.names }}</td>
+        <td>{{ item.class }}</td>
+        <td>{{ item.subject }}</td>
+        <td>
+          <a type="button" class="btn btn-warning mar" (click) = "editInventroy(i)" routerLink="/editInventory">Edit</a>
+          <button type="button" class="btn btn-danger" (click) = "deleteInventory(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <a class="button btn btn-primary" routerLink="/addInventory">Add Item</a>
+</div>

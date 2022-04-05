@@ -1,0 +1,28 @@
+<div class="container">
+
+    <form [formGroup]="editinventoryForm" (ngSubmit)="onSubmit()">
+        
+        <div class="form-group mt-2 mb-2">
+            <label for="Id">Id: </label>
+            <input id="Id" class="form-control" type="number" formControlName="id">
+        </div>
+    
+        <div class="form-group mt-2 mb-2">
+        <label for="name">Name: </label>
+        <input id="name" class="form-control" type="text" formControlName="names" >
+    </div>
+    
+    <div class="form-group mt-2 mb-2">
+        <label for="Class">Class: </label>
+        <input id="Class"  class="form-control"type="text" formControlName="class" >
+    </div>
+    
+    <div class="form-group mt-2 mb-2">
+        <label for="Subject:">Subject: </label>
+        <input id="Subject:" class="form-control" type="text" formControlName="subject">
+    </div>
+    <div class="form-group mt-2 mb-2">
+        <button type="submit" class="btn btn-success"  [disabled]="!editinventoryForm.valid">Edit</button>
+    </div>
+      </form>
+    </div>
